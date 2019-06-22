@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <style>
+      body{
+         overflow:hidden;
+      }
+      #wrapper{
+         background:white;
+         width:250px;
+         text-align:center;
+         min-height:350px;
+      }
+      form{
+         width:150px;
+         margin:auto;
+      }
+      #clock{
+         border:1px solid black;
+         width:150px;
+         margin:auto;
+         margin-top:20px;
+         font-size:20px;
+         font-weight:bold;
+      }
+      #setting{
+         position:absolute;
+         left:225px;
+         top:15px;
+         font-size: 18px;
+         color:rgb(59, 59, 59);
+         cursor: pointer;
+      }
+      .slidecontainer{
+         display:none;
+         width:250px;
+         min-height:355px;
+         background:rgb(255, 255, 255); 
+         position:absolute;
+      }
+      .time{
+         width:70%;
+         margin:auto;
+      }
+      #close{
+         color:red;
+         position:absolute;
+         left:225px;
+         top:15px;
+         cursor:pointer;
+      }
+   </style>
+   <title>pamadora</title>
+</head>
+<body>
+   <div id="wrapper">
+      <span id="setting" class="glyphicon glyphicon-cog"></span>
+      <div class="slidecontainer">
+         <span class="glyphicon glyphicon-remove" id="close"></span>
+         <br><br>
+         <input class="form-control time" id="mi" type="text">Min
+         <input class="form-control time" id="sec" type="text">sec
+         <br><br>
+         <button class="btn btn-success" id="change">change</button>
+      </div>
+      <div id="clock"></div>
+      <br>
+      <form>
+         <select name="cat" class="form-control">
+            <option value="study">study</option>
+            <option value="coding">code</option>
+            <option value="learn">learn</option>
+         </select>
+         <br>
+         <button id="start" class="btn btn-primary form-control">start</button>
+         <br><br>
+         <button id="pause" class="btn btn-info form-control">Pause</button>
+         <br><br>
+         <button id="reset" class="btn btn-danger form-control">Reset</button>
+      </form>
+   </div>
+   <script src="app.js"></script>
+</body>
+</html>
